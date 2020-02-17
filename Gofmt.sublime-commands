@@ -1,0 +1,6 @@
+[
+  {
+    "caption": "Gofmt: Format Buffer",
+    "command": "gofmt_format_buffer"
+  }
+]

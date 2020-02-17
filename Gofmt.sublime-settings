@@ -1,0 +1,51 @@
+{
+  /*
+  Executable with zero or more arguments.
+
+  Recommended: install `goimports` and change this to `["goimports"]`.
+
+  When modifying this setting, ensure that the executable expects to
+  communicate over standard input/output.
+  */
+  "executable": ["gofmt"],
+
+  /*
+  Format current buffer on save. Enabled by default.
+
+  Note that you can format the buffer manually via the "Gofmt: Format Buffer"
+  command.
+  */
+  "format_on_save": true,
+
+  /*
+  Determines the CWD of the subprocess. Possible values:
+
+    - "auto"         -- try to use the current file's directory; fall back on
+      the project root, which is assumed to be the first directory in the
+      current window
+
+    - "project_root" -- use the project root, which is assumed to be the first
+      directory in the current window
+
+    - "none"         -- don't set the CWD
+
+    - ":<path>"      -- use hardcoded path; may be useful for project-specific
+      settings
+  */
+  "cwd_mode": "auto",
+
+  /*
+  Show errors from `gofmt` as popups. Disabled by default.
+  */
+  "error_messages": false,
+
+  /*
+  Determines how to replace the contents of the current buffer with the
+  formatted output. Possible values:
+
+    - "diff":    -- more complicated but better at preserving cursor position
+
+    - "replace": -- simpler but doesn't preserve cursor position
+  */
+  "merge_type": "diff"
+}
