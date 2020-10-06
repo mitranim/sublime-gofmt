@@ -15,9 +15,9 @@ def is_go_view(view):
 
 
 def get_setting(view, key):
-    global_overrides = view.settings().get(DICT_KEY)
-    if isinstance(global_overrides, dict) and key in global_overrides:
-        return global_overrides[key]
+    overrides = view.settings().get(DICT_KEY)
+    if isinstance(overrides, dict) and key in overrides:
+        return overrides[key]
     return sublime.load_settings(SETTINGS).get(key)
 
 
@@ -88,7 +88,7 @@ def run_format(view, input, encoding):
     )
 
     (stdout, stderr) = proc.communicate(input=bytes(input, encoding=encoding))
-    (stdout, stderr) = stdout.decode(encoding), stderr.decode(encoding)
+    (stdout, stderr) = (stdout.decode(encoding), stderr.decode(encoding))
 
     if proc.returncode != 0:
         err = sub.CalledProcessError(proc.returncode, args)
