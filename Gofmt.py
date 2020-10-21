@@ -133,7 +133,7 @@ class gofmt_format_buffer(sublime_plugin.TextCommand):
 
         if merge_type == 'diff':
             # `gofmt` forces tabs. If the file currently uses spaces, diffing
-            # and formatting will fail. Forcing tabs avoid this.
+            # and formatting will fail. Forcing tabs avoids this.
             view.settings().set('translate_tabs_to_spaces', False)
             merge_into_view(view, edit, stdout)
 

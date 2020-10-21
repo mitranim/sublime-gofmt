@@ -2,6 +2,8 @@
 
 Gofmt is a Sublime Text 3 plugin that auto-formats Go code. Requires Sublime Text version 3124 or later. Simpler alternative to [noonat/sublime-gofmt](https://github.com/noonat/sublime-gofmt) without error highlighting.
 
+**Deprecated** in favor of https://github.com/mitranim/sublime-fmt which is more general.
+
 ## Installation
 
 This plugin is not on Package Control and requires manual installation.
